@@ -1,0 +1,216 @@
+@import "general";
+/*----------------------CONTENIDO PARA TODAS LAS PAGINAS-----------------*/
+/*--------- VARIABLEE GLOBALES ---------*/
+$flexin: flex;
+/*
+/**~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - INICIO.HTML~~~~~~~~~~~~~~~~~~~~~~**/
+.flex--padre{
+    display: $flexin;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    margin: 2em 1em;
+    &__p{
+        font-size: 2rem;
+        font-family: "Noto Sans Mono", monospace;
+        color: cyan;
+    }
+    &--img{
+        height: 300px;
+        width: 300px;
+        margin-top: 2em;
+        margin-right: 1em;
+        border-radius: 10px;
+        border:white solid 2px;
+    }
+}
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - SOBRE MI ~~~~~~~~~~~~~~~~~~~~~~**/
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    div p{
+        color: cyan;
+        font-size: calc(2em+1vw);
+        max-width: 300px;
+        margin-bottom: 1em;
+    }
+    div img{
+        align-self:auto;
+        border-radius: 10px;
+        border:2px solid white;
+        margin: 1em 0;
+    }
+    div ul li{
+        color: cyan;
+        list-style: none;
+        font-size: 1.6em;
+    }
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.icon-img{
+    height: 35px;
+    width: 35px;
+}
+
+@media (max-width: 768px){
+    .icon-img{
+        height: 25px;
+        width: 25px;
+    }
+    div ul li{
+        font-size: 0.8em;
+    }
+    div p{
+        font-size: calc(1em+1vw);
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~ SASS - PORTAFOLIO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.body--flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    .face{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .front{
+        transform: perspective(600px)rotateY(0deg);
+        box-shadow: 0 5px 10px #000;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h3{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: bisque;
+        }
+    }
+    .back{
+        transform: perspective(600px) rotateY(180deg);
+        background: rgb(3,35,54);
+        padding: 15px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 5px 10px #000;
+        .link{
+            border-top: solid 1px #f3f3f3;
+            height: 50px;
+            line-height: 50px;
+            a{
+                color: #f3f3f3;
+            }
+        }
+        h3{
+            font-size: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        p{
+            letter-spacing: 1px;
+        }
+    }
+    &:hover .front{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    &:hover .back{
+        transform: perspective(600px) rotateY(360deg);
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - CONTACTO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.form{
+    background-color:#8f7777;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: auto;
+    &__input{
+        font-family: "Noto Sans Mono", monospace;
+        font-size:1rem;
+        padding: .8em 1em;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 0.2em;
+        &--message{
+            resize: none;
+            padding: 1.8em 1em;
+            margin-bottom: 1.5em;
+        }
+    }
+    &__cta{
+        font-family: "Noto Sans Mono",monospace;
+        background-color: #089fe0;
+        color: #f3f3f3;
+        border:none;
+        font-weight: 300;
+        font-size: 1rem;
+        padding: 0.7em 0;
+        border-radius: 0.2em;
+        cursor: pointer;
+    }
+    &__container{
+        width: 100%;
+        display: grid;
+        gap: 1em;
+        grid-auto-columns: 100%;
+    }
+    &__title{
+        text-align: center;
+        font-size: 1.9rem;
+        margin-bottom: .4em;
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - COMUNIDAD  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.p--estilo{
+    font-family: 'Noto Sans Mono';
+    max-width: 500px;
+    font-size: 1.5vw;
+}
+.cont--estilo{
+    margin: auto;
+    background-color: #089fe0;
+    border-radius: 1.5em;
+    padding: 1em 1em;
+    height: 80%;
+    width: 80%;
+}
+

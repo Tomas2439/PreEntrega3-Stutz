@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Buenas, Mi nombre es Tomás. Te presento mi portafolio hecho en html,css,sass y bootstrap. Espero que te guste.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Sass, node js, bootstrap">
+    <meta name="author" content="Tomas Stutz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans+Mono&display=swap" rel="stylesheet" />
+    <link href="css\estilos.css" rel="stylesheet">
+    <title>Portafolio - Contacto</title>
+    <link rel="shortcut icon" href="Imagenes\IconoPF.jpg">
+    <script defer src="index.js"></script>
+</head>
+
+<body class="body--flex">
+    <header class="header">
+        <nav class="nav">
+            <button class="boton-burger nav-toggle" aria-label="Abrir menú">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="1inicio.html" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="2sobremi.html" class="nav-menu-link nav-link">Sobre Mi</a></li>
+                <li class="nav-menu-item"><a href="3portafolio.html" class="nav-menu-link nav-link">Portafolio</a></li>
+                <li class="nav-menu-item"><a href="4contacto.html"
+                        class="nav-menu-link nav-menu-link_active nav-link">Contacto</a></li>
+                <li class="nav-menu-item"><a href="5comunidad.html" class="nav-menu-link nav-link">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form class="form">
+        <div class="form__container">
+            <h2 class="form__title">Contáctame</h2>
+            <input type="text" class="form__input" placeholder="Nombre y apellido:">
+            <input type="email" class="form__input" placeholder="Email:">
+            <textarea class="form__input form__input--message" placeholder="Deje su comentario en esta área"></textarea>
+            <input class="form__cta"type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+
+</html>

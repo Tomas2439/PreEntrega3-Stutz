@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head><!-- Metas / Links / Title -->
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Buenas, Mi nombre es Tomás. Te presento mi portafolio hecho en html,css,sass y bootstrap. Espero que te guste.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Sass, node js, bootstrap">
+    <meta name="author" content="Tomas Stutz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\estilos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagenes\IconoPF.jpg">
+    <title>Portafolio - Sobre Mi</title>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header class="header"> <!-- Navegador con Javascript-->
+        <nav class="nav">
+            <button class="boton-burger nav-toggle" aria-label="Abrir menú">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="1inicio.html" class="nav-menu-link  nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="2sobremi.html" class="nav-menu-link nav-link nav-menu-link_active">Sobre Mi</a></li>
+                <li class="nav-menu-item"><a href="3portafolio.html" class="nav-menu-link nav-link">Portafolio</a></li>
+                <li class="nav-menu-item"><a href="4contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
+                <li class="nav-menu-item"><a href="5comunidad.html" class="nav-menu-link nav-link">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header> <!---------------- Sobre Mi ------------->
+    <div class="container">
+        <div class="caja">
+            <img src="Imagenes\MateMolino.jpg" alt="Foto Referencia" height="300" width="300">
+            <p>Soy <b>Tecnico Informatico Profesional y Personal</b>.<br />
+                Ahora mismo me encuentro cursando la carrera de desarrollador Frontend
+                en CoderHouse.<br />
+                Mi pasion por la programación recién esta comenzando..</p>
+        </div>
+        <div class="caja"> <!-- Lista con barras de progreso -->
+            <ul>
+                <li><b><u>Conocimientos:</u></b></li>
+                <li><img class="icon-img" src="Imagenes\html5.png" alt="html5">
+                    <progress id="file" max="100" value="85"> 70% </progress></li>
+                <li><img class="icon-img" src="Imagenes\css-3.png" alt="CSS">
+                    <progress id="file" max="100" value="69"> 70% </progress></li>
+                <li><img class="icon-img" src="Imagenes\visual-basic.png" alt="Visual Basic">
+                    <progress id="file" max="100" value="70"> 70% </progress></li>
+                <li><img class="icon-img" src="Imagenes\letter-c.png" alt="Lenguaje C">
+                    <progress id="file" max="100" value="75"> 70% </progress></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <!------------------------- Boton para continuar ------------------------->
+    <footer class="flex--footer">
+        <a href="3portafolio.html" class="btn">Continuación</a>
+    </footer>
+</body>
+
+</html>
