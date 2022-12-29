@@ -38,7 +38,7 @@ $flexin: flex;
     flex-wrap: wrap;
     div p{
         color: cyan;
-        font-size: calc(2em+1vw);
+        font-size: calc(1em + 0.5vw);
         max-width: 300px;
         margin-bottom: 1em;
     }
@@ -63,6 +63,7 @@ $flexin: flex;
 .icon-img{
     height: 35px;
     width: 35px;
+    border: transparent !important;
 }
 
 @media (max-width: 768px){
@@ -74,85 +75,12 @@ $flexin: flex;
         font-size: 0.8em;
     }
     div p{
-        font-size: calc(1em+1vw);
+        font-size: calc(1em + 1vw);
     }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~ SASS - PORTAFOLIO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.body--flex{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 100vh;
-}
-.card{
-    position: relative;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    .face{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: .5s;
-    }
-    .front{
-        transform: perspective(600px)rotateY(0deg);
-        box-shadow: 0 5px 10px #000;
-        img{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        h3{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 45px;
-            line-height: 45px;
-            color: bisque;
-        }
-    }
-    .back{
-        transform: perspective(600px) rotateY(180deg);
-        background: rgb(3,35,54);
-        padding: 15px;
-        color: #f3f3f3;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        box-shadow: 0 5px 10px #000;
-        .link{
-            border-top: solid 1px #f3f3f3;
-            height: 50px;
-            line-height: 50px;
-            a{
-                color: #f3f3f3;
-            }
-        }
-        h3{
-            font-size: 30px;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }
-        p{
-            letter-spacing: 1px;
-        }
-    }
-    &:hover .front{
-        transform: perspective(600px) rotateY(180deg);
-    }
-    &:hover .back{
-        transform: perspective(600px) rotateY(360deg);
-    }
-}
-
+@import"../scss/imports/card";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - CONTACTO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .form{
     background-color:#8f7777;
