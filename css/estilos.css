@@ -172,6 +172,9 @@ button:hover div:last-child {
   text-decoration: none;
   color: lightgrey;
 }
+.footer--contacto, .footer--comunidad {
+  margin-top: 3em;
+}
 
 /*----------------------CONTENIDO PARA TODAS LAS PAGINAS-----------------*/
 /*--------- VARIABLEE GLOBALES ---------*/
@@ -362,7 +365,7 @@ body {
 .form__container {
   width: 100%;
   display: grid;
-  gap: 1em;
+  gap: 1.5em;
   grid-auto-columns: 100%;
 }
 .form__title {
@@ -372,10 +375,35 @@ body {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - COMUNIDAD  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.botones {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.botones a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+.botones a:hover {
+  transform: scale(1.2);
+}
+
 .p--estilo {
   font-family: "Noto Sans Mono";
   max-width: 500px;
-  font-size: 1.5vw;
+  font-size: calc(1em + 0.5vw);
+  margin: 1.5em;
 }
 
 .cont--estilo {

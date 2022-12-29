@@ -118,7 +118,7 @@ $flexin: flex;
     &__container{
         width: 100%;
         display: grid;
-        gap: 1em;
+        gap: 1.5em;
         grid-auto-columns: 100%;
     }
     &__title{
@@ -129,11 +129,13 @@ $flexin: flex;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - COMUNIDAD  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@import "../scss/imports/botones";
 
 .p--estilo{
     font-family: 'Noto Sans Mono';
     max-width: 500px;
-    font-size: 1.5vw;
+    font-size: calc(1em + 0.5vw);
+    margin: 1.5em;
 }
 .cont--estilo{
     margin: auto;
