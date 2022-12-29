@@ -1,0 +1,63 @@
+.skills {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.skills_right {
+  width: 50%;
+}
+
+.linea .bar {
+  height: 0.4rem;
+  position: relative;
+  list-style: none;
+  border-radius: 10px;
+  margin: 3rem 0;
+  animation: skills;
+  animation-duration: 1s;
+}
+.linea .bar .html {
+  width: 90%;
+  background-color: #e54c21;
+}
+.linea .bar .css {
+  width: 80%;
+  background-color: #00a0ee;
+}
+.linea .bar .js {
+  width: 75%;
+  background-color: yellow;
+}
+.linea .bar .boostrap {
+  width: 60%;
+  background-color: #7952b3;
+}
+.linea .bar .c {
+  width: 65%;
+  background-color: #61dafa;
+}
+
+.lenguaje {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+}
+
+.porcentaje {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0;
+}
+
+@media screen and (max-width: 834px) {
+  .skills {
+    padding: 0.5rem;
+  }
+  .right {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=barras.css.map */
