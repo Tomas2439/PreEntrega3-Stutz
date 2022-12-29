@@ -6,11 +6,14 @@
 body {
   background-color: #1a1a1a;
   font-family: sans-serif;
-  padding: 90px 20px 0; }
+  padding-top: 90px;
+  max-width: 100vw;
+}
 
 * {
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   background-color: rgba(164, 158, 189, 0.13);
@@ -18,32 +21,40 @@ body {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+}
 
 .nav {
   display: flex;
   justify-content: flex-end;
-  max-width: 1200px;
-  margin: 0 40px; }
-  .nav-link {
-    color: aquamarine;
-    text-decoration: none; }
-  .nav-menu {
-    display: flex;
-    margin-right: 40px;
-    list-style: none; }
-    .nav-menu-item {
-      font-size: 18px;
-      margin: 0 10px;
-      line-height: 80px;
-      text-transform: uppercase;
-      width: max-content; }
-    .nav-menu-link {
-      padding: 8px 12px;
-      border-radius: 5px; }
-      .nav-menu-link:hover, .nav-menu-link_active {
-        background-color: grey;
-        transition: 0.6s; }
+  max-width: 100%;
+  margin: 0 0;
+}
+.nav-link {
+  color: aquamarine;
+  text-decoration: none;
+}
+.nav-menu {
+  display: flex;
+  margin-right: 2em;
+  padding-right: 1em;
+  list-style: none;
+}
+.nav-menu-item {
+  font-size: 1.2em;
+  margin-left: 0.7em;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.nav-menu-link:hover, .nav-menu-link_active {
+  background-color: grey;
+  transition: 0.6s;
+}
 
 .boton-burger {
   display: none;
@@ -52,31 +63,39 @@ body {
   height: 3rem;
   border: 0;
   background: transparent;
-  gap: .65rem;
-  margin-top: 1.6rem; }
+  gap: 0.65rem;
+  margin-top: 1.6rem;
+}
 
 button > div {
+  margin-right: 1.5em;
   background: white;
   height: 2px;
   width: 100%;
   border-radius: 5px;
-  transition: all .5s;
-  transform-origin: left; }
+  transition: all 0.5s;
+  transform-origin: left;
+}
 
 button:hover div:first-child {
-  transform: rotate(45deg); }
+  transform: rotate(45deg);
+}
 
 button:hover div:nth-child(2) {
-  opacity: 0; }
+  opacity: 0;
+}
 
 button:hover div:last-child {
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg);
+}
 
 @media (max-width: 768px) {
   body {
-    padding-top: 70px; }
+    padding-top: 70px;
+  }
   .header {
-    height: 60px; }
+    height: 60px;
+  }
   .nav-menu {
     flex-direction: column;
     align-items: center;
@@ -86,44 +105,76 @@ button:hover div:last-child {
     top: 60px;
     width: 100%;
     padding: 20px 0;
-    height: calc(100%-60px);
+    height: calc(100% - 60px);
     overflow: auto;
     left: 100%;
-    transition: left 0.3s; }
-    .nav-menu_visible {
-      left: 0; }
-    .nav-menu-item {
-      line-height: 70px; }
-    .nav-menu-link:hover, .nav-menu-link_active {
-      background: none;
-      color: #83c5f7; }
+    transition: left 0.3s;
+  }
+  .nav-menu_visible {
+    left: 0;
+  }
+  .nav-menu-item {
+    line-height: 70px;
+  }
+  .nav-menu-link:hover, .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+  }
   .boton-burger {
     margin-top: 1rem;
-    display: flex; } }
-
+    display: flex;
+  }
+}
 .btn {
   display: block;
-  width: 30%;
-  height: 30%;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  font-size: 1.5vw;
-  background-color: #272e2e;
+  width: 10em;
+  height: 2.5em;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: calc(1em + 1vh);
+  background-color: rgb(39, 46, 46);
   border-radius: 10px;
   padding: 0.5em 0.5em;
   text-decoration: none;
   color: cyan;
   text-align: center;
-  text-justify: center; }
-  .btn:hover {
-    background-color: transparent;
-    border: 2px solid #7fceff; }
+  text-justify: center;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid rgb(127, 206, 255);
+}
 
-.flex--footer {
+.flex--footer { /*Boton continuar anteriomente footer*/
   display: flex;
   width: 100%;
   padding: 1em;
+  margin-bottom: 1em;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  background-color: #252525;
+  width: 100%;
+  margin-top: auto;
+  height: 3em;
+}
+.footer--p {
+  color: lightgrey;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif, "Gill Sans";
+}
+.footer--p--a {
+  text-decoration: none;
+  color: lightgrey;
+}
+.footer--contacto, .footer--comunidad {
+  margin-top: 3em;
+}
 
 /*----------------------CONTENIDO PARA TODAS LAS PAGINAS-----------------*/
 /*--------- VARIABLEE GLOBALES ---------*/
@@ -137,123 +188,146 @@ button:hover div:last-child {
   align-items: center;
   height: 50%;
   width: 100%;
-  margin: 2em 1em; }
-  .flex--padre__p {
-    font-size: 2rem;
-    font-family: "Noto Sans Mono", monospace;
-    color: cyan; }
-  .flex--padre--img {
-    height: 300px;
-    width: 300px;
-    margin-top: 2em;
-    margin-right: 1em;
-    border-radius: 10px;
-    border: white solid 2px; }
+  margin: 1em 0em;
+}
+.flex--padre__p {
+  padding: 1em 1em;
+  font-size: 2rem;
+  font-family: "Noto Sans Mono", monospace;
+  color: cyan;
+}
+.flex--padre--img {
+  height: 300px;
+  width: 300px;
+  margin-top: 2em;
+  margin-right: 1em;
+  border-radius: 10px;
+  border: white solid 2px;
+}
 
 /**~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - SOBRE MI ~~~~~~~~~~~~~~~~~~~~~~**/
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap; }
-  .container div p {
-    color: cyan;
-    font-size: calc(2em+1vw);
-    max-width: 300px;
-    margin-bottom: 1em; }
-  .container div img {
-    align-self: auto;
-    border-radius: 10px;
-    border: 2px solid white;
-    margin: 1em 0; }
-  .container div ul li {
-    color: cyan;
-    list-style: none;
-    font-size: 1.6em; }
+  flex-wrap: wrap;
+}
+.container div p {
+  color: cyan;
+  font-size: calc(1em + 0.5vw);
+  max-width: 300px;
+  margin-bottom: 1em;
+}
+.container div img {
+  align-self: auto;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 1em 0;
+}
+.container div ul li {
+  color: cyan;
+  list-style: none;
+  font-size: 1.6em;
+}
 
 .caja {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 2em;
+}
 
 .icon-img {
   height: 35px;
-  width: 35px; }
+  width: 35px;
+  border: transparent !important;
+}
 
 @media (max-width: 768px) {
   .icon-img {
     height: 25px;
-    width: 25px; }
+    width: 25px;
+  }
   div ul li {
-    font-size: 0.8em; }
+    font-size: 0.8em;
+  }
   div p {
-    font-size: calc(1em+1vw); } }
-
+    font-size: calc(1em + 1vw);
+  }
+}
 /*~~~~~~~~~~~~~~~~~~~~~ SASS - PORTAFOLIO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.body--flex {
+body {
+  width: 100%;
+  font-family: sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 50%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 100vh; }
+  justify-content: center;
+}
 
-.card {
-  position: relative;
-  width: 300px;
-  height: 350px;
-  margin: 20px; }
-  .card .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: .5s; }
-  .card .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000; }
-    .card .front img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    .card .front h3 {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 45px;
-      line-height: 45px;
-      color: bisque; }
-  .card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background: #032336;
-    padding: 15px;
-    color: #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 5px 10px #000; }
-    .card .back .link {
-      border-top: solid 1px #f3f3f3;
-      height: 50px;
-      line-height: 50px; }
-      .card .back .link a {
-        color: #f3f3f3; }
-    .card .back h3 {
-      font-size: 30px;
-      margin-top: 20px;
-      letter-spacing: 2px; }
-    .card .back p {
-      letter-spacing: 1px; }
-  .card:hover .front {
-    transform: perspective(600px) rotateY(180deg); }
-  .card:hover .back {
-    transform: perspective(600px) rotateY(360deg); }
+.container .card {
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.25s;
+  background-color: rgb(85, 128, 129);
+}
+
+.container .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+  width: 330px;
+  height: 220px;
+}
+
+.container .card h4 {
+  font-weight: 700;
+}
+
+.container .card p {
+  padding: 0 1rem;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.container .card a {
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+}
+.container .card a:hover {
+  color: violet;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - CONTACTO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .form {
@@ -262,43 +336,75 @@ button:hover div:last-child {
   max-width: 400px;
   border-radius: 1em;
   padding: 3.5em 1.5em;
-  margin: auto; }
-  .form__input {
-    font-family: "Noto Sans Mono", monospace;
-    font-size: 1rem;
-    padding: .8em 1em;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 0.2em; }
-    .form__input--message {
-      resize: none;
-      padding: 1.8em 1em;
-      margin-bottom: 1.5em; }
-  .form__cta {
-    font-family: "Noto Sans Mono",monospace;
-    background-color: #089fe0;
-    color: #f3f3f3;
-    border: none;
-    font-weight: 300;
-    font-size: 1rem;
-    padding: 0.7em 0;
-    border-radius: 0.2em;
-    cursor: pointer; }
-  .form__container {
-    width: 100%;
-    display: grid;
-    gap: 1em;
-    grid-auto-columns: 100%; }
-  .form__title {
-    text-align: center;
-    font-size: 1.9rem;
-    margin-bottom: .4em; }
+  margin: auto;
+}
+.form__input {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 0.2em;
+}
+.form__input--message {
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: 1.5em;
+}
+.form__cta {
+  font-family: "Noto Sans Mono", monospace;
+  background-color: #089fe0;
+  color: #f3f3f3;
+  border: none;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.7em 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.form__container {
+  width: 100%;
+  display: grid;
+  gap: 1.5em;
+  grid-auto-columns: 100%;
+}
+.form__title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 0.4em;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SASS - COMUNIDAD  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.botones {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.botones a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+.botones a:hover {
+  transform: scale(1.2);
+}
+
 .p--estilo {
-  font-family: 'Noto Sans Mono';
+  font-family: "Noto Sans Mono";
   max-width: 500px;
-  font-size: 1.5vw; }
+  font-size: calc(1em + 0.5vw);
+  margin: 1.5em;
+}
 
 .cont--estilo {
   margin: auto;
@@ -306,4 +412,7 @@ button:hover div:last-child {
   border-radius: 1.5em;
   padding: 1em 1em;
   height: 80%;
-  width: 80%; }
+  width: 80%;
+}
+
+/*# sourceMappingURL=estilos.css.map */
