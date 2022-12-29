@@ -51,7 +51,7 @@ body{
 
 
 .container .card h4{
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .container .card p{
@@ -63,8 +63,12 @@ body{
 
 .container .card a {
     font-weight: 500;
+    font-size: 1em;
     text-decoration: none;
     color: black;
+    &:hover{
+        color: violet;
+    }
 }
 
 
